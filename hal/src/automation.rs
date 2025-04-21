@@ -153,7 +153,6 @@ where
 
 impl<A, const N: usize> Default for All<A, { N }>
 where
-    [Option<A>; N]: core::array::LengthAtMost32,
     [Option<A>; N]: Default,
 {
     fn default() -> All<A, { N }> {
@@ -163,16 +162,10 @@ where
     }
 }
 
-impl<A, const N: usize> Copy for All<A, { N }>
-where
-    [Option<A>; N]: core::array::LengthAtMost32,
-    [Option<A>; N]: Copy,
-{
-}
+impl<A, const N: usize> Copy for All<A, { N }> where [Option<A>; N]: Copy {}
 
 impl<A, const N: usize> Clone for All<A, { N }>
 where
-    [Option<A>; N]: core::array::LengthAtMost32,
     [Option<A>; N]: Clone,
 {
     fn clone(&self) -> All<A, { N }> {
@@ -184,7 +177,6 @@ where
 
 impl<A, const N: usize> Debug for All<A, { N }>
 where
-    [Option<A>; N]: core::array::LengthAtMost32,
     [Option<A>; N]: Debug,
 {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
@@ -196,7 +188,6 @@ where
 
 impl<A, const N: usize> PartialEq for All<A, { N }>
 where
-    [Option<A>; N]: core::array::LengthAtMost32,
     [Option<A>; N]: PartialEq,
 {
     fn eq(&self, other: &Self) -> bool {

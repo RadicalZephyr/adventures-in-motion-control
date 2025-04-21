@@ -18,7 +18,7 @@ impl<const N: usize> MotionPlanner<{ N }> where [Step; N]: Array {}
 
 impl<const N: usize> Default for MotionPlanner<{ N }>
 where
-    [Step; N]: core::array::LengthAtMost32 + Array,
+    [Step; N]: Array,
 {
     fn default() -> MotionPlanner<{ N }> {
         MotionPlanner {
@@ -29,7 +29,7 @@ where
 
 impl<const N: usize> Clone for MotionPlanner<{ N }>
 where
-    [Step; N]: Array + core::array::LengthAtMost32,
+    [Step; N]: Array,
     <[Step; N] as Array>::Item: Clone,
 {
     fn clone(&self) -> MotionPlanner<{ N }> {
@@ -41,7 +41,7 @@ where
 
 impl<const N: usize> Debug for MotionPlanner<{ N }>
 where
-    [Step; N]: Array + core::array::LengthAtMost32,
+    [Step; N]: Array,
     <[Step; N] as Array>::Item: Debug,
 {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
@@ -55,7 +55,7 @@ where
 
 impl<const N: usize> PartialEq for MotionPlanner<{ N }>
 where
-    [Step; N]: Array + core::array::LengthAtMost32,
+    [Step; N]: Array,
     <[Step; N] as Array>::Item: PartialEq,
 {
     fn eq(&self, other: &Self) -> bool {

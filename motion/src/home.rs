@@ -110,7 +110,7 @@ pub enum FaultKind {
 /// The *Go To Home* [`AutomationSequence`].
 #[derive(Debug, Clone, PartialEq)]
 pub struct Home {
-    inner: All<MoveAxisHome, { 3 }>,
+    inner: All<MoveAxisHome, 3>,
 }
 
 impl Home {

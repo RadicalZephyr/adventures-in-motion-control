@@ -8,7 +8,7 @@ edition = "2018"
 
 [dependencies]
 aimc_hal = { path = "../hal" }
-uom = { version = "0.26", features = ["f32", "si"], default_features = false }
+uom = { version = "0.36", features = ["f32", "si"], default_features = false }
 arrayvec = { version = "0.5", default-features = false }
 scroll = "0.10"
 scroll_derive = "0.10"

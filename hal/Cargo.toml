@@ -14,7 +14,7 @@ publish = false
 anpp = "2.0"
 scroll_derive = "0.10"
 scroll = "0.10"
-uom = { version = "0.26", features = ["f32", "si"], default_features = false }
+uom = { version = "0.36", features = ["f32", "si"], default_features = false }
 
 [dev-dependencies]
 arrayvec = { version = "0.5", default-features = false }
